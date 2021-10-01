@@ -1,5 +1,5 @@
 .content{
-    max-width: 90%;
+    max-width: min(112rem, 90%);
 }
 
 #room header{
@@ -46,7 +46,8 @@
 #question-form form{
     border: 0.2rem solid var(--blue-gray);
     padding: 1.6rem;
-    border-radius: 0 0.8rem 0 0.8rem;
+    border-radius: 0 0.8rem 0.8rem 0.8rem;
+    margin-bottom: 1.6rem;
 }
 
 #question-form form textarea{
