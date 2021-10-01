@@ -16,6 +16,7 @@ html{
     --overlay: #040911;
     --icons-details: #A5B0C1;
     --dark-gray: #4D5E77;
+    --medium-gray: #EAECF2;
     --blue-gray: #A1B2CD;
     --light-gray: #E5EAF1;
 
@@ -88,6 +89,19 @@ button.outlined,
     border: .2rem solid var(--blue);
 }
 
+button.red,
+.button.red{
+    background: var(--red);
+    color: var(--white);
+}
+
+button.gray,
+.button.gray{
+    background: var(--light-gray);
+    color: (--dark-gray);
+}
+
+/* header */
 .content header{
     width: 80%;
     margin: 3.5rem auto;
