@@ -27,11 +27,26 @@ deleteButton.forEach(button => {
 
 // função para abrir modal e mudar os textos do título, descrição e botão //
 function handleClick(event, check = true){
+    // tag a não alterar a url //
+    event.preventDefault()
     // variável para a repetição do texto //
     const text = check ? "Marcar como lida" : "Excluir"
+    // variável para o action //
+    const slug = check ? "check" : "delete"
+    // variável para o id da sala //
+    const roomId = document.querySelector("#room-id").dataset.id
+    // variável para o data-id das perguntas //
+    const questionId = event.target.dataset.id
 
+    const form = document.querySelector(".modal form")
+    form.setAttribute("action", `/room/${roomId}/${questionId}/${slug}`)
+
+    // mudando o texto da modal //
     modalTitle.innerHTML = `${text} esta pergunta`
     modalDescription.innerHTML = `Tem certeza que deseja ${text.toLowerCase()} esta pergunta?`
+    modalButton.innerHTML = `Sim, ${text.toLowerCase()}`
+    check ? modalButton.classList.remove("red") : modalButton.classList.add("red")
+
     // abrir modal //
     modal.open()
 }
