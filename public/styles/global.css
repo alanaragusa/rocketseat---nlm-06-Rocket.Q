@@ -33,7 +33,7 @@ body{
 body, button, input, textarea{
     font-size: clamp(14px, 1.6rem, 2vw); /* clamp - intervalo de tamanho (menor tamanho, padrão, maior tamanho) */
 
-    font-family: 'Open Sans', sans-serif; ;
+    font-family: 'Open Sans', sans-serif; 
 }
 
 .content{
